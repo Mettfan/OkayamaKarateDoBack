@@ -77,6 +77,9 @@ Sucursal.hasMany(Membership)
 Membership.belongsToMany(Sucursal, {through: 'SucursalMemberships'})
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
+Product.hasMany(Membership)
+Membership.belongsToMany(Product, {through: 'ProductMemberships'})
+
 Ticket.belongsToMany(User, {through: 'UserTickets'} )
 User.belongsToMany(Ticket, {through: 'UserTickets'} )
 
